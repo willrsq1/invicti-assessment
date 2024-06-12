@@ -1,16 +1,42 @@
 #include <cpr/cpr.h>
 #include <iostream>
 
+#define SHOW_STATUS_CODE false //toggle from true to false to show the exit code
+
+//https://docs.libcpr.org/introduction.html#post-requests
+
 int main()
 {
     cpr::Response r = cpr::Post(cpr::Url{"http://testphp.vulnweb.com/userinfo.php"},
-                                cpr::Header{{"Content-Type", "application/x-www-form-urlencoded"},
-                                            {"Cookie", "login=test%2Ftest"}},
+                                cpr::Header{{"Content-Type", "application/x-www-form-urlencoded"}},
                                 cpr::Body{"uname=test&pass=test"});
-    std::cout << r.text << std::endl;
-    std::cout << r.status_code << std::endl;
+
+    std::cout << r.text;
+
+    SHOW_STATUS_CODE ? std::cout << r.status_code << std::endl : std::cout << std::endl;
+
+    if (r.status_code != 200)
+        return (1);
+
+    return (0);
+
+    //for future usage, if there is a need to access the user's session
+
+    std::string loginCookieValue;
+    for (const auto &cookie : r.cookies) {
+        if (cookie.GetName() == "login")
+        {
+            loginCookieValue = cookie.GetValue();
+            break ;
+        }
+    }
+
+    std::cout << "User identification cookie: " << loginCookieValue << std::endl;
+
     return (0);
 }
+
+//Not using the url asked in the assessement. Need to find a way to connect by using ..../login.php instead
 
 
 // curl 'http://testphp.vulnweb.com/userinfo.php' \
