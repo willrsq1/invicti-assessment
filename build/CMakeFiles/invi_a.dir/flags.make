@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/will/code/invicti/lib/cpr/include -I/home/will/code/invicti/build/lib/cpr/cpr_generated_includes -I/home/will/code/invicti/build/_deps/curl-src/include
+CXX_INCLUDES = -I/home/will/code/invicti-assessement/build/_deps/cpr-src/include -I/home/will/code/invicti-assessement/build/_deps/cpr-build/cpr_generated_includes -I/home/will/code/invicti-assessement/build/_deps/curl-src/include
 
-CXX_FLAGS = -O3 -DNDEBUG
+CXX_FLAGS = -g
 

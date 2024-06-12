@@ -3,8 +3,8 @@
 
 CMakeFiles/invi_a.dir/main.cpp.o: ../main.cpp \
   /usr/include/stdc-predef.h \
-  ../lib/cpr/include/cpr/cpr.h \
-  ../lib/cpr/include/cpr/api.h \
+  _deps/cpr-src/include/cpr/cpr.h \
+  _deps/cpr-src/include/cpr/api.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/ios \
@@ -39,7 +39,6 @@ CMakeFiles/invi_a.dir/main.cpp.o: ../main.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/11/exception \
   /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/exception_ptr.h \
@@ -145,11 +144,8 @@ CMakeFiles/invi_a.dir/main.cpp.o: ../main.cpp \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/cstdio \
   /usr/include/stdio.h \
@@ -158,8 +154,6 @@ CMakeFiles/invi_a.dir/main.cpp.o: ../main.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/11/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -240,8 +234,12 @@ CMakeFiles/invi_a.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/bits/atomic_lockfree_defines.h \
   /usr/include/c++/11/bits/atomic_futex.h \
   /usr/include/c++/11/bits/std_thread.h \
-  ../lib/cpr/include/cpr/async.h \
-  ../lib/cpr/include/cpr/async_wrapper.h \
+  _deps/cpr-src/include/cpr/async.h \
+  _deps/cpr-src/include/cpr/singleton.h \
+  _deps/cpr-src/include/cpr/threadpool.h \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/list.tcc \
   /usr/include/c++/11/memory \
   /usr/include/c++/11/bits/stl_raw_storage_iter.h \
   /usr/include/c++/11/bits/align.h \
@@ -250,14 +248,17 @@ CMakeFiles/invi_a.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/backward/auto_ptr.h \
   /usr/include/c++/11/pstl/glue_memory_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
-  ../lib/cpr/include/cpr/response.h \
-  /usr/include/c++/11/cassert \
-  /usr/include/assert.h \
-  ../lib/cpr/include/cpr/cert_info.h \
-  ../lib/cpr/include/cpr/cookies.h \
-  ../lib/cpr/include/cpr/curlholder.h \
-  _deps/curl-src/include/curl/curl.h \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/bits/stl_queue.h \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
+  _deps/cpr-src/include/cpr/auth.h \
+  _deps/cpr-src/include/cpr/bearer.h \
   _deps/curl-src/include/curl/curlver.h \
+  _deps/cpr-src/include/cpr/cprtypes.h \
   _deps/curl-src/include/curl/system.h \
   /usr/include/x86_64-linux-gnu/sys/socket.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -276,7 +277,22 @@ CMakeFiles/invi_a.dir/main.cpp.o: ../main.cpp \
   /usr/include/x86_64-linux-gnu/asm/sockios.h \
   /usr/include/asm-generic/sockios.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
-  /usr/include/x86_64-linux-gnu/bits/socket2.h \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/numeric \
+  /usr/include/c++/11/bits/stl_numeric.h \
+  /usr/include/c++/11/pstl/glue_numeric_defs.h \
+  _deps/cpr-src/include/cpr/multipart.h \
+  _deps/cpr-src/include/cpr/buffer.h \
+  _deps/cpr-src/include/cpr/file.h \
+  _deps/cpr-src/include/cpr/payload.h \
+  _deps/cpr-src/include/cpr/curl_container.h \
+  _deps/cpr-src/include/cpr/curlholder.h \
+  _deps/curl-src/include/curl/curl.h \
+  _deps/curl-src/include/curl/curlver.h \
+  _deps/curl-src/include/curl/system.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
   /usr/include/limits.h \
@@ -292,203 +308,94 @@ CMakeFiles/invi_a.dir/main.cpp.o: ../main.cpp \
   _deps/curl-src/include/curl/curl.h \
   _deps/curl-src/include/curl/urlapi.h \
   _deps/curl-src/include/curl/options.h \
-  _deps/curl-src/include/curl/header.h \
-  _deps/curl-src/include/curl/websockets.h \
+  _deps/cpr-src/include/cpr/response.h \
+  /usr/include/c++/11/cassert \
+  /usr/include/assert.h \
+  _deps/cpr-src/include/cpr/cert_info.h \
+  _deps/cpr-src/include/cpr/cookies.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
-  ../lib/cpr/include/cpr/cprtypes.h \
-  _deps/curl-src/include/curl/system.h \
-  /usr/include/c++/11/map \
-  /usr/include/c++/11/bits/stl_tree.h \
-  /usr/include/c++/11/bits/stl_map.h \
-  /usr/include/c++/11/bits/stl_multimap.h \
-  /usr/include/c++/11/numeric \
-  /usr/include/c++/11/bits/stl_numeric.h \
-  /usr/include/c++/11/pstl/glue_numeric_defs.h \
-  ../lib/cpr/include/cpr/error.h \
-  ../lib/cpr/include/cpr/ssl_options.h \
-  ../lib/cpr/include/cpr/filesystem.h \
-  /usr/include/c++/11/filesystem \
-  /usr/include/c++/11/bits/fs_fwd.h \
-  /usr/include/c++/11/bits/fs_path.h \
-  /usr/include/c++/11/locale \
-  /usr/include/c++/11/bits/locale_facets_nonio.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
-  /usr/include/libintl.h \
-  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
-  /usr/include/c++/11/bits/locale_conv.h \
-  /usr/include/c++/11/iomanip \
-  /usr/include/c++/11/bits/quoted_string.h \
-  /usr/include/c++/11/codecvt \
-  /usr/include/c++/11/bits/fs_dir.h \
-  /usr/include/c++/11/bits/fs_ops.h \
-  ../lib/cpr/include/cpr/util.h \
-  ../lib/cpr/include/cpr/callback.h \
-  ../lib/cpr/include/cpr/cprtypes.h \
-  /usr/include/c++/11/optional \
-  ../lib/cpr/include/cpr/singleton.h \
-  ../lib/cpr/include/cpr/threadpool.h \
-  /usr/include/c++/11/list \
-  /usr/include/c++/11/bits/stl_list.h \
-  /usr/include/c++/11/bits/list.tcc \
-  /usr/include/c++/11/queue \
-  /usr/include/c++/11/deque \
-  /usr/include/c++/11/bits/stl_deque.h \
-  /usr/include/c++/11/bits/deque.tcc \
-  /usr/include/c++/11/bits/stl_queue.h \
-  /usr/include/c++/11/thread \
-  /usr/include/c++/11/bits/this_thread_sleep.h \
-  ../lib/cpr/include/cpr/async_wrapper.h \
-  ../lib/cpr/include/cpr/auth.h \
-  ../lib/cpr/include/cpr/bearer.h \
-  _deps/curl-src/include/curl/curlver.h \
-  ../lib/cpr/include/cpr/multipart.h \
-  ../lib/cpr/include/cpr/buffer.h \
-  ../lib/cpr/include/cpr/file.h \
-  ../lib/cpr/include/cpr/multiperform.h \
-  ../lib/cpr/include/cpr/curlmultiholder.h \
-  ../lib/cpr/include/cpr/session.h \
-  /usr/include/c++/11/variant \
-  ../lib/cpr/include/cpr/accept_encoding.h \
-  /usr/include/c++/11/unordered_set \
-  /usr/include/c++/11/bits/unordered_set.h \
-  ../lib/cpr/include/cpr/body.h \
-  ../lib/cpr/include/cpr/buffer.h \
-  ../lib/cpr/include/cpr/file.h \
-  ../lib/cpr/include/cpr/connect_timeout.h \
-  ../lib/cpr/include/cpr/timeout.h \
-  ../lib/cpr/include/cpr/http_version.h \
-  ../lib/cpr/include/cpr/interface.h \
-  ../lib/cpr/include/cpr/limit_rate.h \
-  ../lib/cpr/include/cpr/local_port.h \
-  ../lib/cpr/include/cpr/local_port_range.h \
-  ../lib/cpr/include/cpr/low_speed.h \
-  ../lib/cpr/include/cpr/parameters.h \
-  ../lib/cpr/include/cpr/curl_container.h \
-  ../lib/cpr/include/cpr/payload.h \
-  ../lib/cpr/include/cpr/proxies.h \
-  ../lib/cpr/include/cpr/proxyauth.h \
-  ../lib/cpr/include/cpr/range.h \
-  ../lib/cpr/include/cpr/redirect.h \
-  ../lib/cpr/include/cpr/reserve_size.h \
-  ../lib/cpr/include/cpr/resolve.h \
-  /usr/include/c++/11/set \
-  /usr/include/c++/11/bits/stl_set.h \
-  /usr/include/c++/11/bits/stl_multiset.h \
-  ../lib/cpr/include/cpr/unix_socket.h \
-  ../lib/cpr/include/cpr/user_agent.h \
-  ../lib/cpr/include/cpr/verbose.h \
-  lib/cpr/cpr_generated_includes/cpr/cprver.h \
-  ../lib/cpr/include/cpr/interceptor.h \
-  ../lib/cpr/include/cpr/ssl_ctx.h \
-  ../lib/cpr/include/cpr/status_codes.h \
+  _deps/cpr-src/include/cpr/error.h \
+  _deps/cpr-src/include/cpr/ssl_options.h \
+  _deps/cpr-src/include/cpr/util.h \
+  _deps/cpr-src/include/cpr/callback.h \
+  _deps/cpr-src/include/cpr/cprtypes.h \
+  _deps/cpr-src/include/cpr/session.h \
+  _deps/cpr-src/include/cpr/accept_encoding.h \
+  _deps/cpr-src/include/cpr/body.h \
+  _deps/cpr-src/include/cpr/buffer.h \
+  _deps/cpr-src/include/cpr/file.h \
+  _deps/cpr-src/include/cpr/connect_timeout.h \
+  _deps/cpr-src/include/cpr/timeout.h \
+  _deps/cpr-src/include/cpr/http_version.h \
+  _deps/cpr-src/include/cpr/interface.h \
+  _deps/cpr-src/include/cpr/limit_rate.h \
+  _deps/cpr-src/include/cpr/local_port.h \
+  _deps/cpr-src/include/cpr/local_port_range.h \
+  _deps/cpr-src/include/cpr/low_speed.h \
+  _deps/cpr-src/include/cpr/parameters.h \
+  _deps/cpr-src/include/cpr/proxies.h \
+  _deps/cpr-src/include/cpr/proxyauth.h \
+  _deps/cpr-src/include/cpr/range.h \
+  _deps/cpr-src/include/cpr/redirect.h \
+  _deps/cpr-src/include/cpr/reserve_size.h \
+  _deps/cpr-src/include/cpr/unix_socket.h \
+  _deps/cpr-src/include/cpr/user_agent.h \
+  _deps/cpr-src/include/cpr/verbose.h \
+  _deps/cpr-build/cpr_generated_includes/cpr/cprver.h \
+  _deps/cpr-src/include/cpr/interceptor.h \
+  _deps/cpr-src/include/cpr/ssl_ctx.h \
+  _deps/cpr-src/include/cpr/status_codes.h \
   /usr/include/c++/11/iostream
 
 
-lib/cpr/cpr_generated_includes/cpr/cprver.h:
+_deps/cpr-src/include/cpr/interceptor.h:
 
-../lib/cpr/include/cpr/user_agent.h:
+_deps/cpr-build/cpr_generated_includes/cpr/cprver.h:
 
-/usr/include/c++/11/bits/stl_set.h:
+_deps/cpr-src/include/cpr/verbose.h:
 
-/usr/include/c++/11/set:
+_deps/cpr-src/include/cpr/user_agent.h:
 
-../lib/cpr/include/cpr/resolve.h:
+_deps/cpr-src/include/cpr/unix_socket.h:
 
-../lib/cpr/include/cpr/range.h:
+_deps/cpr-src/include/cpr/redirect.h:
 
-../lib/cpr/include/cpr/proxyauth.h:
+_deps/cpr-src/include/cpr/range.h:
 
-../lib/cpr/include/cpr/proxies.h:
+_deps/cpr-src/include/cpr/proxies.h:
 
-../lib/cpr/include/cpr/parameters.h:
+_deps/cpr-src/include/cpr/local_port_range.h:
 
-/usr/include/c++/11/bits/stl_multiset.h:
+_deps/cpr-src/include/cpr/local_port.h:
 
-../lib/cpr/include/cpr/low_speed.h:
+_deps/cpr-src/include/cpr/limit_rate.h:
 
-../lib/cpr/include/cpr/local_port_range.h:
+_deps/cpr-src/include/cpr/interface.h:
 
-../lib/cpr/include/cpr/interface.h:
+_deps/cpr-src/include/cpr/timeout.h:
 
-../lib/cpr/include/cpr/http_version.h:
+_deps/cpr-src/include/cpr/connect_timeout.h:
 
-../lib/cpr/include/cpr/timeout.h:
+_deps/cpr-src/include/cpr/accept_encoding.h:
 
-../lib/cpr/include/cpr/payload.h:
+_deps/cpr-src/include/cpr/session.h:
 
-../lib/cpr/include/cpr/connect_timeout.h:
+_deps/cpr-src/include/cpr/callback.h:
 
-../lib/cpr/include/cpr/body.h:
+_deps/cpr-src/include/cpr/util.h:
 
-/usr/include/c++/11/bits/unordered_set.h:
-
-/usr/include/c++/11/variant:
-
-../lib/cpr/include/cpr/session.h:
-
-../lib/cpr/include/cpr/curlmultiholder.h:
-
-../lib/cpr/include/cpr/multiperform.h:
-
-../lib/cpr/include/cpr/buffer.h:
-
-../lib/cpr/include/cpr/multipart.h:
-
-../lib/cpr/include/cpr/bearer.h:
-
-/usr/include/c++/11/bits/deque.tcc:
-
-/usr/include/c++/11/deque:
-
-/usr/include/c++/11/bits/list.tcc:
-
-/usr/include/c++/11/bits/stl_list.h:
-
-/usr/include/c++/11/list:
-
-../lib/cpr/include/cpr/threadpool.h:
-
-/usr/include/c++/11/optional:
-
-../lib/cpr/include/cpr/callback.h:
-
-/usr/include/c++/11/bits/fs_ops.h:
-
-/usr/include/c++/11/bits/fs_dir.h:
-
-/usr/include/c++/11/bits/quoted_string.h:
-
-/usr/include/c++/11/bits/locale_conv.h:
-
-/usr/include/c++/11/bits/locale_facets_nonio.tcc:
-
-/usr/include/libintl.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h:
-
-../lib/cpr/include/cpr/reserve_size.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
-
-/usr/include/c++/11/bits/locale_facets_nonio.h:
-
-../lib/cpr/include/cpr/filesystem.h:
-
-/usr/include/c++/11/bits/stl_numeric.h:
-
-/usr/include/c++/11/numeric:
-
-/usr/include/c++/11/bits/stl_map.h:
-
-/usr/include/c++/11/bits/stl_tree.h:
-
-/usr/include/c++/11/map:
-
-../lib/cpr/include/cpr/cprtypes.h:
+_deps/cpr-src/include/cpr/ssl_options.h:
 
 /usr/include/c++/11/sstream:
+
+_deps/cpr-src/include/cpr/cookies.h:
+
+_deps/cpr-src/include/cpr/cert_info.h:
+
+/usr/include/assert.h:
+
+/usr/include/c++/11/cassert:
 
 _deps/curl-src/include/curl/options.h:
 
@@ -502,17 +409,27 @@ _deps/curl-src/include/curl/options.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
-../lib/cpr/include/cpr/local_port.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
 
-/usr/include/c++/11/filesystem:
+_deps/cpr-src/include/cpr/curl_container.h:
 
-/usr/include/x86_64-linux-gnu/bits/socket2.h:
+_deps/cpr-src/include/cpr/payload.h:
+
+_deps/cpr-src/include/cpr/buffer.h:
+
+_deps/cpr-src/include/cpr/multipart.h:
+
+/usr/include/c++/11/bits/stl_numeric.h:
+
+/usr/include/c++/11/numeric:
+
+/usr/include/c++/11/bits/stl_map.h:
+
+/usr/include/c++/11/bits/stl_tree.h:
+
+/usr/include/c++/11/map:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h:
-
-_deps/curl-src/include/curl/websockets.h:
 
 /usr/include/asm-generic/sockios.h:
 
@@ -522,23 +439,17 @@ _deps/curl-src/include/curl/websockets.h:
 
 /usr/include/x86_64-linux-gnu/bits/sockaddr.h:
 
-../lib/cpr/include/cpr/status_codes.h:
-
 /usr/include/x86_64-linux-gnu/bits/socket_type.h:
 
 /usr/include/x86_64-linux-gnu/bits/socket.h:
+
+_deps/cpr-src/include/cpr/cprtypes.h:
 
 /usr/include/c++/11/bits/cxxabi_forced.h:
 
 /usr/include/c++/11/fstream:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/c++/11/bits/stl_deque.h:
-
-../lib/cpr/include/cpr/util.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
 
@@ -558,8 +469,6 @@ _deps/curl-src/include/curl/websockets.h:
 
 /usr/include/c++/11/ext/new_allocator.h:
 
-../lib/cpr/include/cpr/verbose.h:
-
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/c++/11/bits/allocated_ptr.h:
@@ -567,6 +476,10 @@ _deps/curl-src/include/curl/websockets.h:
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/c++/11/mutex:
+
+_deps/cpr-src/include/cpr/curlholder.h:
+
+/usr/include/c++/11/ext/atomicity.h:
 
 /usr/include/c++/11/bits/stl_pair.h:
 
@@ -578,9 +491,15 @@ _deps/curl-src/include/curl/websockets.h:
 
 /usr/include/c++/11/bits/ios_base.h:
 
+_deps/curl-src/include/curl/urlapi.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
 /usr/include/c++/11/pstl/glue_numeric_defs.h:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
+
+_deps/cpr-src/include/cpr/low_speed.h:
 
 /usr/include/locale.h:
 
@@ -588,11 +507,11 @@ _deps/curl-src/include/curl/websockets.h:
 
 /usr/include/c++/11/bits/localefwd.h:
 
+_deps/cpr-src/include/cpr/reserve_size.h:
+
 /usr/include/x86_64-linux-gnu/asm/socket.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
-
-/usr/include/c++/11/iomanip:
 
 /usr/include/c++/11/cctype:
 
@@ -614,11 +533,13 @@ _deps/curl-src/include/curl/websockets.h:
 
 /usr/include/c++/11/bits/predefined_ops.h:
 
-../lib/cpr/include/cpr/interceptor.h:
+_deps/cpr-src/include/cpr/http_version.h:
 
 /usr/include/c++/11/clocale:
 
 /usr/include/c++/11/bits/ostream.tcc:
+
+_deps/cpr-src/include/cpr/parameters.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
@@ -627,10 +548,6 @@ _deps/curl-src/include/curl/websockets.h:
 /usr/include/c++/11/bits/sstream.tcc:
 
 /usr/include/c++/11/new:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/wchar.h:
 
@@ -642,19 +559,27 @@ _deps/curl-src/include/curl/websockets.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
+/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
+
+/usr/include/c++/11/backward/binders.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/c++/11/bits/deque.tcc:
+
+_deps/cpr-src/include/cpr/file.h:
+
+_deps/cpr-src/include/cpr/api.h:
+
 /usr/include/c++/11/tuple:
-
-../lib/cpr/include/cpr/file.h:
-
-../lib/cpr/include/cpr/curlholder.h:
 
 /usr/include/asm-generic/socket.h:
 
 /usr/include/c++/11/bits/invoke.h:
 
 /usr/include/c++/11/bits/postypes.h:
-
-../lib/cpr/include/cpr/redirect.h:
 
 /usr/include/c++/11/cstdint:
 
@@ -665,10 +590,6 @@ _deps/curl-src/include/curl/websockets.h:
 /usr/include/c++/11/debug/debug.h:
 
 /usr/include/features-time64.h:
-
-_deps/curl-src/include/curl/header.h:
-
-/usr/include/c++/11/bits/stringfwd.h:
 
 /usr/include/c++/11/pstl/pstl_config.h:
 
@@ -698,15 +619,21 @@ _deps/curl-src/include/curl/header.h:
 
 /usr/include/c++/11/bits/hash_bytes.h:
 
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
 /usr/include/c++/11/bits/string_view.tcc:
 
+_deps/cpr-src/include/cpr/cpr.h:
+
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/c++/11/iostream:
 
 /usr/include/c++/11/bits/node_handle.h:
-
-/usr/include/c++/11/unordered_set:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
@@ -715,6 +642,8 @@ _deps/curl-src/include/curl/header.h:
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /usr/include/c++/11/bits/char_traits.h:
+
+_deps/cpr-src/include/cpr/status_codes.h:
 
 /usr/include/asm-generic/errno-base.h:
 
@@ -726,15 +655,15 @@ _deps/curl-src/include/curl/easy.h:
 
 /usr/include/c++/11/functional:
 
-/usr/include/features.h:
+/usr/include/c++/11/bits/alloc_traits.h:
 
-../lib/cpr/include/cpr/ssl_ctx.h:
+/usr/include/stdc-predef.h:
+
+/usr/include/features.h:
 
 /usr/include/c++/11/ext/numeric_traits.h:
 
 /usr/include/c++/11/bits/atomic_base.h:
-
-../lib/cpr/include/cpr/limit_rate.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
 
@@ -744,23 +673,23 @@ _deps/curl-src/include/curl/easy.h:
 
 /usr/include/c++/11/bits/stl_function.h:
 
+/usr/include/c++/11/bits/stringfwd.h:
+
+_deps/cpr-src/include/cpr/auth.h:
+
 /usr/include/c++/11/ext/type_traits.h:
 
 /usr/include/c++/11/pstl/glue_memory_defs.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+/usr/include/x86_64-linux-gnu/bits/time64.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
+/usr/include/c++/11/ctime:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-_deps/curl-src/include/curl/urlapi.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-../lib/cpr/include/cpr/cpr.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
@@ -772,17 +701,15 @@ _deps/curl-src/include/curl/urlapi.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
+/usr/include/c++/11/deque:
+
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/usr/include/c++/11/ctime:
-
-../lib/cpr/include/cpr/accept_encoding.h:
-
-../lib/cpr/include/cpr/api.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/usr/include/c++/11/bits/range_access.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/c++/11/debug/assertions.h:
 
@@ -792,17 +719,15 @@ _deps/curl-src/include/curl/urlapi.h:
 
 /usr/include/c++/11/exception:
 
-../lib/cpr/include/cpr/singleton.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
+/usr/include/c++/11/cwchar:
 
-../lib/cpr/include/cpr/auth.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
 
 _deps/curl-src/include/curl/system.h:
 
@@ -820,39 +745,15 @@ _deps/curl-src/include/curl/system.h:
 
 /usr/include/c++/11/bits/stl_tempbuf.h:
 
-/usr/include/c++/11/bits/stl_queue.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
 
 /usr/include/c++/11/cstdlib:
 
 /usr/include/c++/11/bit:
 
-/usr/include/assert.h:
-
-/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
-
-/usr/include/c++/11/backward/binders.h:
-
-/usr/include/x86_64-linux-gnu/bits/time.h:
-
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar2.h:
-
-../lib/cpr/include/cpr/async_wrapper.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/usr/include/c++/11/bits/range_access.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
 /usr/include/c++/11/bits/exception_ptr.h:
+
+/usr/include/c++/11/list:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
@@ -874,9 +775,9 @@ _deps/curl-src/include/curl/curlver.h:
 
 /usr/include/c++/11/typeinfo:
 
-/usr/include/c++/11/bits/functexcept.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
-../lib/cpr/include/cpr/error.h:
+/usr/include/c++/11/bits/functexcept.h:
 
 /usr/include/asm-generic/bitsperlong.h:
 
@@ -892,13 +793,13 @@ _deps/curl-src/include/curl/curlver.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
 
-/usr/include/c++/11/locale:
-
 /usr/include/ctype.h:
 
-/usr/include/stdc-predef.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
-/usr/include/c++/11/bits/alloc_traits.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/c++/11/bits/stl_queue.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 
@@ -920,17 +821,9 @@ _deps/curl-src/include/curl/curlver.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
-/usr/include/c++/11/bits/fs_path.h:
-
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
-/usr/include/c++/11/cwchar:
-
-/usr/include/x86_64-linux-gnu/bits/select2.h:
-
 /usr/include/alloca.h:
-
-/usr/include/c++/11/cwctype:
 
 /usr/include/c++/11/cstdio:
 
@@ -940,33 +833,11 @@ _deps/curl-src/include/curl/curlver.h:
 
 /usr/include/stdio.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
-
-/usr/include/c++/11/bits/this_thread_sleep.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-/usr/include/c++/11/bits/locale_facets.tcc:
-
-/usr/include/x86_64-linux-gnu/sys/types.h:
-
-/usr/include/c++/11/ext/aligned_buffer.h:
-
-/usr/include/c++/11/future:
-
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /usr/include/c++/11/cerrno:
 
 /usr/include/errno.h:
-
-/usr/include/c++/11/ios:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
-
-/usr/include/c++/11/utility:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
@@ -982,9 +853,7 @@ _deps/curl-src/include/curl/curlver.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
-/usr/include/c++/11/ext/atomicity.h:
-
-../lib/cpr/include/cpr/cookies.h:
+_deps/cpr-src/include/cpr/ssl_ctx.h:
 
 /usr/include/c++/11/bits/charconv.h:
 
@@ -994,13 +863,15 @@ _deps/curl-src/include/curl/curlver.h:
 
 /usr/include/c++/11/system_error:
 
-../lib/cpr/include/cpr/ssl_options.h:
+/usr/include/c++/11/ios:
 
-/usr/include/c++/11/bits/stl_vector.h:
+/usr/include/c++/11/utility:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
 
 /usr/include/c++/11/stdexcept:
 
-/usr/include/c++/11/codecvt:
+_deps/cpr-src/include/cpr/error.h:
 
 /usr/include/c++/11/bits/streambuf.tcc:
 
@@ -1014,9 +885,25 @@ _deps/curl-src/include/curl/curlver.h:
 
 /usr/include/c++/11/bits/locale_facets.h:
 
+/usr/include/c++/11/cwctype:
+
 /usr/include/c++/11/bits/streambuf_iterator.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
+
+/usr/include/c++/11/bits/list.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/c++/11/bits/this_thread_sleep.h:
+
+/usr/include/c++/11/bits/locale_facets.tcc:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/c++/11/ext/aligned_buffer.h:
+
+/usr/include/c++/11/future:
 
 /usr/include/c++/11/ostream:
 
@@ -1038,17 +925,17 @@ _deps/curl-src/include/curl/curlver.h:
 
 /usr/include/c++/11/array:
 
-../lib/cpr/include/cpr/async.h:
-
 /usr/include/linux/stddef.h:
 
 /usr/include/c++/11/bits/refwrap.h:
 
 /usr/include/c++/11/bits/hashtable.h:
 
-../lib/cpr/include/cpr/unix_socket.h:
-
 /usr/include/c++/11/bits/hashtable_policy.h:
+
+/usr/include/c++/11/bits/stl_vector.h:
+
+_deps/cpr-src/include/cpr/singleton.h:
 
 /usr/include/c++/11/bits/codecvt.h:
 
@@ -1070,23 +957,21 @@ _deps/curl-src/include/curl/curlver.h:
 
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
+_deps/cpr-src/include/cpr/response.h:
+
 /usr/include/c++/11/backward/auto_ptr.h:
 
-/usr/include/c++/11/bits/fs_fwd.h:
+_deps/cpr-src/include/cpr/proxyauth.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
 /usr/include/c++/11/bits/vector.tcc:
 
 /usr/include/c++/11/bits/stl_algo.h:
-
-/usr/include/c++/11/cassert:
 
 /usr/include/c++/11/pstl/execution_defs.h:
 
@@ -1096,9 +981,9 @@ _deps/curl-src/include/curl/curlver.h:
 
 /usr/include/c++/11/bits/stl_heap.h:
 
-/usr/include/c++/11/thread:
-
 /usr/include/c++/11/condition_variable:
+
+/usr/include/c++/11/thread:
 
 /usr/include/c++/11/ratio:
 
@@ -1120,20 +1005,26 @@ _deps/curl-src/include/curl/curl.h:
 
 /usr/include/c++/11/bits/atomic_futex.h:
 
-../lib/cpr/include/cpr/curl_container.h:
-
 /usr/include/c++/11/bits/cpp_type_traits.h:
 
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
 
 /usr/include/c++/11/bits/std_thread.h:
 
+_deps/cpr-src/include/cpr/body.h:
+
+_deps/cpr-src/include/cpr/async.h:
+
+_deps/cpr-src/include/cpr/threadpool.h:
+
+/usr/include/c++/11/bits/stl_list.h:
+
 /usr/include/c++/11/memory:
 
 /usr/include/c++/11/bits/stl_raw_storage_iter.h:
 
-../lib/cpr/include/cpr/response.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
+/usr/include/c++/11/bits/stl_deque.h:
 
-../lib/cpr/include/cpr/cert_info.h:
+_deps/cpr-src/include/cpr/bearer.h:

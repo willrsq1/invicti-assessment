@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/will/code/invicti
+CMAKE_SOURCE_DIR = /home/will/code/invicti-assessement
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/will/code/invicti/build
+CMAKE_BINARY_DIR = /home/will/code/invicti-assessement/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/will/code/invicti/build/CMakeFiles /home/will/code/invicti/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/will/code/invicti-assessement/build/CMakeFiles /home/will/code/invicti-assessement/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/will/code/invicti/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/will/code/invicti-assessement/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -188,43 +188,30 @@ zlib/fast:
 .PHONY : zlib/fast
 
 #=============================================================================
-# Target rules for targets named curl_uninstall
+# Target rules for targets named uninstall
 
 # Build rule for target.
-curl_uninstall: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 curl_uninstall
-.PHONY : curl_uninstall
+uninstall: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall
+.PHONY : uninstall
 
 # fast build rule for target.
-curl_uninstall/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/curl-build/CMakeFiles/curl_uninstall.dir/build.make _deps/curl-build/CMakeFiles/curl_uninstall.dir/build
-.PHONY : curl_uninstall/fast
+uninstall/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/curl-build/CMakeFiles/uninstall.dir/build.make _deps/curl-build/CMakeFiles/uninstall.dir/build
+.PHONY : uninstall/fast
 
 #=============================================================================
-# Target rules for targets named curlu
+# Target rules for targets named libcurl
 
 # Build rule for target.
-curlu: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 curlu
-.PHONY : curlu
+libcurl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libcurl
+.PHONY : libcurl
 
 # fast build rule for target.
-curlu/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/curl-build/lib/CMakeFiles/curlu.dir/build.make _deps/curl-build/lib/CMakeFiles/curlu.dir/build
-.PHONY : curlu/fast
-
-#=============================================================================
-# Target rules for targets named libcurl_shared
-
-# Build rule for target.
-libcurl_shared: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libcurl_shared
-.PHONY : libcurl_shared
-
-# fast build rule for target.
-libcurl_shared/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/build.make _deps/curl-build/lib/CMakeFiles/libcurl_shared.dir/build
-.PHONY : libcurl_shared/fast
+libcurl/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/curl-build/lib/CMakeFiles/libcurl.dir/build.make _deps/curl-build/lib/CMakeFiles/libcurl.dir/build
+.PHONY : libcurl/fast
 
 #=============================================================================
 # Target rules for targets named cpr
@@ -236,7 +223,7 @@ cpr: cmake_check_build_system
 
 # fast build rule for target.
 cpr/fast:
-	$(MAKE) $(MAKESILENT) -f lib/cpr/cpr/CMakeFiles/cpr.dir/build.make lib/cpr/cpr/CMakeFiles/cpr.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/cpr-build/cpr/CMakeFiles/cpr.dir/build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/build
 .PHONY : cpr/fast
 
 main.o: main.cpp.o
@@ -275,11 +262,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... curl_uninstall"
+	@echo "... uninstall"
 	@echo "... cpr"
-	@echo "... curlu"
 	@echo "... invi_a"
-	@echo "... libcurl_shared"
+	@echo "... libcurl"
 	@echo "... zlib"
 	@echo "... main.o"
 	@echo "... main.i"

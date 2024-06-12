@@ -1,7 +1,7 @@
 # Make file names absolute:
 #
-get_filename_component(filename "/home/will/code/invicti/build/_deps/curl-subbuild/curl-populate-prefix/src/curl-8.4.0.tar.xz" ABSOLUTE)
-get_filename_component(directory "/home/will/code/invicti/build/_deps/curl-src" ABSOLUTE)
+get_filename_component(filename "/home/will/code/invicti-assessement/build/_deps/curl-subbuild/curl-populate-prefix/src/curl-7.80.0.tar.xz" ABSOLUTE)
+get_filename_component(directory "/home/will/code/invicti-assessement/build/_deps/curl-src" ABSOLUTE)
 
 message(STATUS "extracting...
      src='${filename}'

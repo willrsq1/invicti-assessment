@@ -1,6 +1,6 @@
 /* */
+#include <stdio.h>
 #include <inttypes.h>
-#include <sys/wait.h>
 #include <sys/ioctl.h>
 
 

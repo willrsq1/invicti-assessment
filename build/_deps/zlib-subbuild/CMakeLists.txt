@@ -21,9 +21,9 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 
 include(ExternalProject)
 ExternalProject_Add(zlib-populate
-                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/zlib-ng/zlib-ng" "GIT_TAG" "2.1.3"
-                    SOURCE_DIR          "/home/will/code/invicti/build/_deps/zlib-src"
-                    BINARY_DIR          "/home/will/code/invicti/build/_deps/zlib-build"
+                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/zlib-ng/zlib-ng" "GIT_TAG" "2.0.6"
+                    SOURCE_DIR          "/home/will/code/invicti-assessement/build/_deps/zlib-src"
+                    BINARY_DIR          "/home/will/code/invicti-assessement/build/_deps/zlib-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

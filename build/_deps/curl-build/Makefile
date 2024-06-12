@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/will/code/invicti
+CMAKE_SOURCE_DIR = /home/will/code/invicti-assessement
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/will/code/invicti/build
+CMAKE_BINARY_DIR = /home/will/code/invicti-assessement/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/will/code/invicti/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/will/code/invicti/build/CMakeFiles /home/will/code/invicti/build/_deps/curl-build//CMakeFiles/progress.marks
-	cd /home/will/code/invicti/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/curl-build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/will/code/invicti/build/CMakeFiles 0
+	cd /home/will/code/invicti-assessement/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/will/code/invicti-assessement/build/CMakeFiles /home/will/code/invicti-assessement/build/_deps/curl-build//CMakeFiles/progress.marks
+	cd /home/will/code/invicti-assessement/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/curl-build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/will/code/invicti-assessement/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/will/code/invicti/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/curl-build/clean
+	cd /home/will/code/invicti-assessement/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/curl-build/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,32 +148,32 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/will/code/invicti/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/curl-build/preinstall
+	cd /home/will/code/invicti-assessement/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/curl-build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/will/code/invicti/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/curl-build/preinstall
+	cd /home/will/code/invicti-assessement/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/curl-build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/will/code/invicti/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/will/code/invicti-assessement/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-_deps/curl-build/CMakeFiles/curl_uninstall.dir/rule:
-	cd /home/will/code/invicti/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/curl-build/CMakeFiles/curl_uninstall.dir/rule
-.PHONY : _deps/curl-build/CMakeFiles/curl_uninstall.dir/rule
+_deps/curl-build/CMakeFiles/uninstall.dir/rule:
+	cd /home/will/code/invicti-assessement/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/curl-build/CMakeFiles/uninstall.dir/rule
+.PHONY : _deps/curl-build/CMakeFiles/uninstall.dir/rule
 
 # Convenience name for target.
-curl_uninstall: _deps/curl-build/CMakeFiles/curl_uninstall.dir/rule
-.PHONY : curl_uninstall
+uninstall: _deps/curl-build/CMakeFiles/uninstall.dir/rule
+.PHONY : uninstall
 
 # fast build rule for target.
-curl_uninstall/fast:
-	cd /home/will/code/invicti/build && $(MAKE) $(MAKESILENT) -f _deps/curl-build/CMakeFiles/curl_uninstall.dir/build.make _deps/curl-build/CMakeFiles/curl_uninstall.dir/build
-.PHONY : curl_uninstall/fast
+uninstall/fast:
+	cd /home/will/code/invicti-assessement/build && $(MAKE) $(MAKESILENT) -f _deps/curl-build/CMakeFiles/uninstall.dir/build.make _deps/curl-build/CMakeFiles/uninstall.dir/build
+.PHONY : uninstall/fast
 
 # Help Target
 help:
@@ -187,7 +187,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... curl_uninstall"
+	@echo "... uninstall"
 .PHONY : help
 
 
@@ -199,6 +199,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/will/code/invicti/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/will/code/invicti-assessement/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

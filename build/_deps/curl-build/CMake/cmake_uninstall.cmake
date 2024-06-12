@@ -5,7 +5,7 @@
 #                            | (__| |_| |  _ <| |___
 #                             \___|\___/|_| \_\_____|
 #
-# Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+# Copyright (C) 1998 - 2020, Daniel Stenberg, <daniel@haxx.se>, et al.
 #
 # This software is licensed as described in the file COPYING, which
 # you should have received as part of this distribution. The terms
@@ -18,11 +18,9 @@
 # This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
 # KIND, either express or implied.
 #
-# SPDX-License-Identifier: curl
-#
 ###########################################################################
-if(NOT EXISTS "/home/will/code/invicti/build/_deps/curl-build/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: /home/will/code/invicti/build/_deps/curl-build/install_manifest.txt")
+if(NOT EXISTS "/home/will/code/invicti-assessement/build/_deps/curl-build/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: /home/will/code/invicti-assessement/build/_deps/curl-build/install_manifest.txt")
 endif()
 
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -30,7 +28,7 @@ if(NOT DEFINED CMAKE_INSTALL_PREFIX)
 endif()
 message(${CMAKE_INSTALL_PREFIX})
 
-file(READ "/home/will/code/invicti/build/_deps/curl-build/install_manifest.txt" files)
+file(READ "/home/will/code/invicti-assessement/build/_deps/curl-build/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 foreach(file ${files})
   message(STATUS "Uninstalling $ENV{DESTDIR}${file}")
