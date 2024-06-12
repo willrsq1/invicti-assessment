@@ -6,6 +6,6 @@ Requirements:
 
 How to use:
 
-	- run `sh launch.sh`
+	- run `sh ./launch.sh`
 		or manually:
 	- run `mkdir build && cd build && cmake .. && make && ./invi_a`
