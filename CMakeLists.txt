@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 project(invi_a)
 
-add_executable(invi_a main.cpp findingLoginPage.cpp getLoginPageData.cpp parsing.cpp)
+add_executable(invi_a files/srcs/main.cpp files/srcs/findingLoginPage.cpp files/srcs/getLoginPageData.cpp files/srcs/parsing.cpp)
 
 include(FetchContent)
 

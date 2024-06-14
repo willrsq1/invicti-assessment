@@ -1,11 +1,12 @@
 
-#include "invicti_assessment.hpp"
+#include "../includes/invicti_assessment.hpp"
 
 std::string getLineFromText(std::string const & htmlContent, std::string const & textToFind)
 {
+    // get the html line from the html content
     std::string line;
 
-    for (char c : htmlContent) // get the html line with text to find in it
+    for (char c : htmlContent)
     {
         if (c == '\n')
         {
@@ -26,10 +27,11 @@ std::string getLineFromText(std::string const & htmlContent, std::string const &
 
 std::string getSubstringBetweenTwoXChar(std::string const & line, char c1, char c2)
 {
+    //get the string contained between c1 and c2 of the given html line
     std::string substr;
     int i = 0;
 
-    while (line[i]) // get the substr part, contained between specified char
+    while (line[i])
     {
         if (line[i] == c1)
         {
