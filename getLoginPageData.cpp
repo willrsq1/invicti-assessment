@@ -30,9 +30,25 @@ bool getConnectionUrl(std::string const & loginPageHtml, std::string & connectio
 
     std::string line = getLineFromText(loginPageHtml, "loginform");
 
+    int pos = line.find("action");
 
-    std::cout << line << std::endl;
-    return (false);
+    if (pos == std::string::npos)
+    {
+        std::cerr << "Couldn't find the redierction to get connectionUrl" << std::endl;
+        return (false);
+    }
+
+    line = line.substr(pos);
+
+    connectionUrl = getSubstringBetweenTwoXChar(line, '"', '"');
+
+    if (connectionUrl.empty())
+    {
+        std::cerr << "Couldn't retrieve the connectionUrl" << std::endl;
+        return (false);
+    }
+
+    return (true);
 }
 
 bool getLoginPageData(std::string const & url, std::string & uname, std::string & pass, std::string & connectionUrl)

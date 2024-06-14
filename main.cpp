@@ -19,13 +19,13 @@ int main()
         std::cerr << "No url found" << std::endl;
         return (1);
     }
-    
-    url += loginUrl;
 
     std::string uname, pass, connectionUrl;
 
-    if (getLoginPageData(url, uname, pass, connectionUrl) == false) // get uname and pass and connection Url
+    if (getLoginPageData(url + loginUrl, uname, pass, connectionUrl) == false) // get uname and pass and connection Url
         return (1);
+
+    std::cout << url + connectionUrl << "  --  uname and pass are: " << uname + " and " + pass << std::endl;
 
     return (0);
 
