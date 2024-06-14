@@ -26,4 +26,4 @@ How it works:
 
 Library used:
 
-	- I used the CPR Library (https://docs.libcpr.org/), that makes c++ requests way easier.
+	- I used the CPR Library (https://docs.libcpr.org/), that makes c++ requests way easier !
