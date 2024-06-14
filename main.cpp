@@ -3,7 +3,7 @@
 
 //https://docs.libcpr.org/introduction.html#post-requests
 
-std::string getLoginUrl(std::string const & htmlContent)
+std::string getLineFromText(std::string const & htmlContent, std::string const & textToFind)
 {
     std::string line;
 
@@ -11,9 +11,9 @@ std::string getLoginUrl(std::string const & htmlContent)
     {
         if (c == '\n')
         {
-            if (line.find("login.php") != std::string::npos)
+            if (line.find(textToFind) != std::string::npos)
             {
-                break;
+                return (line);
             }
             line.clear();
         }
@@ -23,35 +23,78 @@ std::string getLoginUrl(std::string const & htmlContent)
         }
     }
 
-    if (line.empty()) // if no line found, return empty string
-        return (line);
+    return ("");
+}
 
-    std::string url;
+std::string getSubstringBetweenTwoXChar(std::string const & line, char c1, char c2)
+{
+    std::string substr;
     int i = 0;
 
-    while (line[i]) // get the login url part, contained between db quotes
+    while (line[i]) // get the substr part, contained between specified char
     {
-        if (line[i] == '"')
+        if (line[i] == c1)
         {
             i += 1;
-            while (line[i] && line[i] != '"')
+            while (line[i] && line[i] != c2)
             {
-                url += line[i];
+                substr += line[i];
                 i++;
             }
-            return (url);
+            return (substr);
         }
         i++;
     }
 
+    return ("");
+}
+
+std::string getLoginUrl(std::string const & htmlContent)
+{
+    std::string line = getLineFromText(htmlContent, "login.php"); // get the html line with login in it
+
+    if (line.empty()) // if no line found, return empty string
+        return (line);
+
+    std::string url = getSubstringBetweenTwoXChar(line, '"', '"');
+
     return (url);
+}
+
+bool getUnameAndPass(std::string const & url, std::string & uname, std::string & pass)
+{
+    cpr::Response loginPageResponse = cpr::Get(cpr::Url{url});
+
+    if (loginPageResponse.status_code != 200)
+    {
+        std::cerr << "Failed to get loginPage Html" << std::endl;
+        return (false);
+    }
+
+    std::string line = getLineFromText(loginPageResponse.text, "Please use the username"); // get the line containing uname and pass
+
+    if (line.empty())
+        return (false);
+
+    uname = getSubstringBetweenTwoXChar(line, '>', '<'); // get the uname
+
+    int startSubstr = line.find("and the password") + std::string("and the password").length();
+    line = line.substr(startSubstr); // get the second part of the line (after the uname)
+    pass = getSubstringBetweenTwoXChar(line, '>', '<'); // get the pass
+
+    if (uname.empty() || pass.empty())
+        return (false);
+
+    std::cout << uname + " and " + pass << std::endl;
+    
+    return (true);
 }
 
 int main()
 {
     std::string url = "http://testphp.vulnweb.com/";
 
-    cpr::Response landingPageResponse = cpr::Post(cpr::Url{url});
+    cpr::Response landingPageResponse = cpr::Get(cpr::Url{url});
 
     if (landingPageResponse.status_code != 200)
     {
@@ -67,7 +110,17 @@ int main()
         return (1);
     }
     
-    std::cout << "Login page URL: " << loginUrl << std::endl;
+    url += loginUrl;
+
+    std::cout << url << std::endl;
+
+    std::string uname, pass;
+    
+    if (getUnameAndPass(url, uname, pass) == false)
+    {
+        std::cerr << "Failed to retrieve uname and pass" << std::endl;
+        return (1);
+    }
 
     return (0);
 
